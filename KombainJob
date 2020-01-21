@@ -1,0 +1,30 @@
+package ua.lviv.iot.firstLab;
+
+public class KombainJob {
+
+    public static void main(String[] args){
+
+        Kombain firstkombain = new Kombain();
+        Kombain secondkombain = new Kombain(52.5, 475.9, 3, "green");
+        Kombain thirdkombain = new Kombain(54.4, 32.7, 4, "black", 4, "Petro", 1);
+        firstkombain.toString();
+        System.out.println(firstkombain);
+        secondkombain.toString();
+        System.out.println(secondkombain);
+        thirdkombain.toString();
+        System.out.println(thirdkombain);
+
+        Kombain[] arrayOfKombain = new Kombain[4];
+        int somenum = 0;
+        do {
+            arrayOfKombain[somenum] = new Kombain();
+            somenum++;
+        }
+        while (somenum < 4);
+        for(Kombain a:arrayOfKombain){
+            a.toString();
+            System.out.println("\n");
+        }
+
+    }
+}
