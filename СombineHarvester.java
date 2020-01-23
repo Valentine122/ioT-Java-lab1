@@ -2,42 +2,33 @@ package ua.lviv.iot.firstLab;
 
 public class СombineHarvester {
 
-    public static final int DEFAULT_NUMBER_OF_SEATS = 1;
-
     private double volumGrainInKg;
-
     private double fuelConsumptionPerHectareInLiters;
-
     private int enginePowerHorsepower;
 
     private String color;
-
     private int wheels;
 
-    private static int height;
+    private static int heightInMeters;
 
     protected String name;
-
     protected int numberOfSeats;
 
-
-
-
     public СombineHarvester(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color, int wheels,
-                            String name, int numberOfSeats, int height) {
+                            int heightInMeters, String name, int numberOfSeats) {
         this.volumGrainInKg = volumGrainInKg;
         this.fuelConsumptionPerHectareInLiters = fuelConsumptionPerHectareInLiters;
         this.enginePowerHorsepower = enginePowerHorsepower;
         this.color = color;
         this.wheels = wheels;
+        СombineHarvester.heightInMeters = heightInMeters;
         this.name = name;
         this.numberOfSeats = numberOfSeats;
-        this.height = height;
     }
 
 
     public СombineHarvester(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color) {
-        this(volumGrainInKg, fuelConsumptionPerHectareInLiters, enginePowerHorsepower, color, 0, null, DEFAULT_NUMBER_OF_SEATS, 0);
+        this(volumGrainInKg, fuelConsumptionPerHectareInLiters, enginePowerHorsepower, color, 0, 0, null, 0);
     }
 
     public СombineHarvester(){
@@ -95,17 +86,8 @@ public class СombineHarvester {
     public int getNumberOfSeats() {
         return numberOfSeats;
     }
-
     public void setNumberOfSeats(int numberOfSeats) {
         this.numberOfSeats = numberOfSeats;
-    }
-
-    static void printStaticHeight() {
-        System.out.println("Height: " + height);
-    }
-
-    void printHeight() {
-        System.out.println("Height: " + height);
     }
 
 
@@ -117,21 +99,26 @@ public class СombineHarvester {
                 ", enginePowerHorsepower=" + enginePowerHorsepower +
                 ", color='" + color + '\'' +
                 ", wheels=" + wheels +
-                ", name='" + name + '\'' +
-                ", numberOfSeats=" + numberOfSeats + ", Height=" +
-                height + '}';
+                ", name='" + name + '\''  + ", numberOfSeats=" + numberOfSeats + '}';
     }
 
-    public void resetСombineHarvester(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color, int wheels,
-                                      String name, int numberOfSeats, int heightOfKombain) {
+    public String printHeightInMeters(){
+        return "Height = " + heightInMeters;
+    }
+    public static String printStaticHeightInMeters(){
+        return "Static Height = " + heightInMeters;
+    }
+
+    public void resetValues(double volumGrainInKg, double fuelConsumptionPerHectareInLiters, int enginePowerHorsepower, String color, int wheels, int heightInMeters,
+                                      String name, int numberOfSeats) {
         this.volumGrainInKg = volumGrainInKg;
         this.fuelConsumptionPerHectareInLiters = fuelConsumptionPerHectareInLiters;
         this.enginePowerHorsepower = enginePowerHorsepower;
         this.color = color;
         this.wheels = wheels;
+        СombineHarvester.heightInMeters = heightInMeters;
         this.name = name;
         this.numberOfSeats = numberOfSeats;
-        this.height = height;
     }
 
 }
