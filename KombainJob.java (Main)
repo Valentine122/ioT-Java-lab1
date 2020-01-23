@@ -1,31 +1,31 @@
 package ua.lviv.iot.firstLab;
 
-public class KombainJob {
+public class СombineHarvesterCreator {
 
     public static void main(String[] args){
 
-        Kombain firstkombain = new Kombain();
-        Kombain secondkombain = new Kombain(52.5, 475.9, 3, "green");
-        Kombain thirdkombain = new Kombain(54.4, 32.7, 4, "black", 4, "Petro", 1);
-        firstkombain.toString();
-        System.out.println("*****FirstKombain********");
-        System.out.println(firstkombain);
+        СombineHarvester firstсombain = new СombineHarvester();
+        СombineHarvester secondсombain = new СombineHarvester(52.5, 475.9, 3, "green");
+        СombineHarvester thirdсombain = new СombineHarvester(54.4, 32.7, 4, "black", 4, "Petro", 1);
+        firstсombain.toString();
+        System.out.println("*****FirstСombain********");
+        System.out.println(firstсombain);
         System.out.println("*****SecondKombain********");
-        secondkombain.toString();
-        System.out.println(secondkombain);
+        secondсombain.toString();
+        System.out.println(secondсombain);
         System.out.println("*****ThirdKombain********");
-        thirdkombain.toString();
-        System.out.println(thirdkombain);
+        thirdсombain.toString();
+        System.out.println(thirdсombain);
         System.out.println("***Zuklu****");
 
-        Kombain[] arrayOfKombain = new Kombain[4];
+        СombineHarvester[] arrayOfСombain = new СombineHarvester[4];
         int somenum = 0;
         do {
-            arrayOfKombain[somenum] = new Kombain();
+            arrayOfСombain[somenum] = new СombineHarvester();
             somenum++;
         }
         while (somenum < 4);
-        for(Kombain a:arrayOfKombain){
+        for(СombineHarvester a:arrayOfСombain){
             a.toString();
             System.out.println(a);
         }
